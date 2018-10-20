@@ -60,4 +60,3 @@
     ("*Interfaces*" "^\\s-*interface\\s-+\\([a-zA-Z_0-9]+\\)" 1)
     ("*Types*" "^\\s-*typedef\\s-+.*\\s-+\\([a-zA-Z_0-9]+\\)\\s-*;" 1)))
 
-(setq paradox-github-token 0da24442d7ec07fafc4b5272cf427a95859ec9a6)

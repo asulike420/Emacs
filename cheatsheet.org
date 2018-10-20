@@ -1,0 +1,90 @@
+Editing
+
+1. Undo , Ctrl+_
+2. Select all, Ctrl+x h
+3. Cut Word, Ctrl + w
+4. Copy word, Alt + w
+5. Cut sentence, Ctrl+k
+6. Rectagular Cut, M-x kill-rectangle
+Rectangular insert, Ctrl + x, r , t
+7. Toggle Read Only mode, Ctrl + q
+8. Change Mode 
+9. Indent Code, Ctrl+u , TAB
+7. Code Navigation verilog mode
+8. Toggle kill ring https://www.masteringemacs.org/article/searching-buffers-occur-mode
+9. Goto Line number, Alt +g+g
+10. Macros, and registers, Start recordingCtrl+ x , (
+11. Code folding
+12. Helm Mode https://writequit.org/denver-emacs/presentations/2016-03-01-helm.html#orgheadline1
+13. Text Auto completion
+14. 
+highlight in all buffers
+highlight-frame-toggle 
+http://emacs.stackexchange.com/questions/3202/highlighting-text-in-open-displayed-buffers-windows-searching-for-text-from
+https://github.com/glen-dai/highlight-global 
+
+
+ 
+
+Font Resizing
+
+
+Window Management/Navigation
+1. Veritcal split
+2. Horizontal Split
+3. Show line numbers
+4. Goto begining of file
+5. Goto end of file
+6. Speed bar I found a workaround. If I reload the buffer with C-x C-v, speedbar shows the updated list of functions when reopened. – Binil Thomas May 3 '12 at 7:50
+
+
+Browse
+1. Goto Line
+2. Goto File
+3. IDO MODE
+
+Search and replace
+1. Occur Mode use occour to search Ctrl c + Ctrl o https://www.masteringemacs.org/article/searching-buffers-occur-mode
+2. Ibuffer
+3. Mark modified buffers,. Needed when certail string is replaced in multiple opened buffers.
+4. Recursive search
+5. 
+
+
+Notes and Bookmark
+1. ORG MODE
+table 
+https://www.emacswiki.org/emacs/TableMode
+– First, we select the text and capture the table with the M-x table-capture command.
+– We must then specify a column delimiter regexp. SPC SPC is ok for this table.
+– For the row delimiter, we want a newline. This can be entered either with C-o or C-q C-j.
+– We just type RET when asked for justification, this will select the default.
+ 
+– For Minimum Cell Width, we can take a value of 10. Here is the final result:
+ 
+
+
+
+Text Manipulation
+vocablary alt+$ check spelling alt +$
+Uppper case alt+shift u
+
+Emacs Help
+describe-mode 【Ctrl+h m】 to see how to use it.
+
+Save Desktop
+desktop_save
+
+Remote 
+Tramp Mode 
+
+
+Custom Elisp
+1. Skelton
+  (define-skeleton svPutPartselBit
+  "Insert svPutPartSelBit"
+  ()
+  >  (setq name (skeleton-read "Dest: ")) " =  svPutPartSelBit("name", "(skeleton-read "Source: ")", " (skeleton-read "star bit: ")", "(skeleton-read "Width: ")");" \n)
+
+
+

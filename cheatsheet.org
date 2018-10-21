@@ -1,90 +1,168 @@
-Editing
+* Editing
 
-1. Undo , Ctrl+_
-2. Select all, Ctrl+x h
-3. Cut Word, Ctrl + w
-4. Copy word, Alt + w
-5. Cut sentence, Ctrl+k
-6. Rectagular Cut, M-x kill-rectangle
-Rectangular insert, Ctrl + x, r , t
-7. Toggle Read Only mode, Ctrl + q
-8. Change Mode 
-9. Indent Code, Ctrl+u , TAB
-7. Code Navigation verilog mode
-8. Toggle kill ring https://www.masteringemacs.org/article/searching-buffers-occur-mode
-9. Goto Line number, Alt +g+g
-10. Macros, and registers, Start recordingCtrl+ x , (
-11. Code folding
-12. Helm Mode https://writequit.org/denver-emacs/presentations/2016-03-01-helm.html#orgheadline1
-13. Text Auto completion
-14. 
-highlight in all buffers
-highlight-frame-toggle 
-http://emacs.stackexchange.com/questions/3202/highlighting-text-in-open-displayed-buffers-windows-searching-for-text-from
-https://github.com/glen-dai/highlight-global 
+| Editing Action           | Key                |
+|--------------------------+--------------------|
+| Undo                     | Ctrl+_             |
+| Select all               | Ctrl+x h           |
+| Cut Word                 | Alt + w            |
+| Cut sentence             | Ctrl+k             |
+| Rectagular Cut           | M-x kill-rectangle |
+| Rectangular insert       | Ctrl + x, r , t    |
+| Toggle Read Only mode    | Ctrl + q           |
+| Change Mode              |                    |
+| Indent Code              | Ctrl+u , TAB       |
+| Code Navigation          |                    |
+| Goto Line number         | Alt +g+g           |
+| Macros                   |                    |
+| registers                |                    |
+| Code folding             |                    |
+| Helm mode                |                    |
+| Text Auto completion     |                    |
+| Highlight in all buffers |                    |
 
 
- 
+** TODO Toggle kill ring https://www.masteringemacs.org/article/searching-buffers-occur-mode
+** TODO Helm Mode https://writequit.org/denver-emacs/presentations/2016-03-01-helm.html#orgheadline1
+** TODO highlight-frame-toggle 
+ http://emacs.stackexchange.com/questions/3202/highlighting-text-in-open-displayed-buffers-windows-searching-for-text-from
+ https://github.com/glen-dai/highlight-global 
 
-Font Resizing
+* Font Resizing
 
-
-Window Management/Navigation
-1. Veritcal split
-2. Horizontal Split
-3. Show line numbers
-4. Goto begining of file
-5. Goto end of file
-6. Speed bar I found a workaround. If I reload the buffer with C-x C-v, speedbar shows the updated list of functions when reopened. – Binil Thomas May 3 '12 at 7:50
-
-
-Browse
-1. Goto Line
-2. Goto File
-3. IDO MODE
-
-Search and replace
-1. Occur Mode use occour to search Ctrl c + Ctrl o https://www.masteringemacs.org/article/searching-buffers-occur-mode
-2. Ibuffer
-3. Mark modified buffers,. Needed when certail string is replaced in multiple opened buffers.
-4. Recursive search
-5. 
+| Action   | key       |
+|----------+-----------|
+| Zoom In  | Ctrl+x, + |
+| Zoom Out | Ctrl+x, - |
+|          |           |
 
 
-Notes and Bookmark
-1. ORG MODE
-table 
-https://www.emacswiki.org/emacs/TableMode
-– First, we select the text and capture the table with the M-x table-capture command.
-– We must then specify a column delimiter regexp. SPC SPC is ok for this table.
-– For the row delimiter, we want a newline. This can be entered either with C-o or C-q C-j.
-– We just type RET when asked for justification, this will select the default.
- 
-– For Minimum Cell Width, we can take a value of 10. Here is the final result:
- 
+* Window Management/Navigation/Code Browsing
+
+| Veritcal split        | Ctrl+3         |
+| Horizontal Split      | Ctrl+2         |
+| Show line numbers     | M-x linum-mode |
+| Goto begining of file | Ctrl + a       |
+| Goto end of file      | Ctrl + b       |
+| Speed Bar             | M-x speedbar   |
+| Goto Line             |                |
+| Goto File             |                |
+| IDO MODE              |                |
+
+ 
+** TODO Speed bar I found a workaround. If I reload the buffer with C-x C-v, speedbar shows the updated list of functions when reopened. – Binil Thomas May 3 '12 at 7:50,
+
+
+* Search and replace
+
+| Action                          | Key           | Comments                                              |
+|---------------------------------+---------------+-------------------------------------------------------|
+| Recursive search up             | Ctrl-s        |                                                       |
+| Recursive search down           | Ctrl-r        |                                                       |
+| Occur Mode                      | Ctrl-c o      | (global-set-key (kbd "C-c o") 'occur)TODO             |
+| Repalce in Occur Window         |               |                                                       |
+| Ibuffer                         |               |                                                       |
+| Search in marked buffers        |               |                                                       |
+| Replace in marked buffers       |               |                                                       |
+| Query Replace in marked buffers |               |                                                       |
+| Grep-find                       | M-x grep-find | This is similar to what cna be done from the ibuffer. |
+
+
+** Ibuffer
+
+Use Ctrl-h m , while in Ibuufer window to get the list of all hot keys.
+
+| Action                                          | Key |
+|-------------------------------------------------+-----|
+| Save the marked buffers                         | S   |
+| Query and replace in marked buffer              | Q   |
+| Mark buffer based on major mode                 | * M |
+| Mark buffers by their name, using a regexp.     | % n |
+| Mark buffers by their filename, using a regexp. | % f |
+|                                                 |     |
+
+
+** TODO Occur Mode use occour to search Ctrl c + Ctrl o https://www.masteringemacs.org/article/searching-buffers-occur-mode
 
 
 
-Text Manipulation
-vocablary alt+$ check spelling alt +$
-Uppper case alt+shift u
+*  Notes and Bookmark
 
-Emacs Help
-describe-mode 【Ctrl+h m】 to see how to use it.
+| Action                    | Key             | Comments                           |
+|---------------------------+-----------------+------------------------------------|
+| Capture test in org files | M-x org-capture | Possible replacement for bookmarks |
+| Bookmark                  |                 |                                    |
+|                           |                 |                                    |
 
-Save Desktop
+
+
+* ORG MODE
+
+| Action             | Key | Comments |
+|--------------------+-----+----------|
+| Insert table       |     |          |
+| Insert new heading |     |          |
+| Falgs, eg TODO     |     |          |
+| Expand all         |     |          |
+| Collapse all       |     |          |
+
+
+** TODO table 
+ https://www.emacswiki.org/emacs/TableMode
+ – First, we select the text and capture the table with the M-x table-capture command.
+ – We must then specify a column delimiter regexp. SPC SPC is ok for this table.
+ – For the row delimiter, we want a newline. This can be entered either with C-o or C-q C-j.
+ – We just type RET when asked for justification, this will select the default.
+  
+ – For Minimum Cell Width, we can take a value of 10. Here is the final result:
+  
+
+** Example code for setting up org capture
+
+#+BEGIN_SRC elisp
+(setq org-capture-templates
+ '(("h" "HDL" entry (file+headline "~/GitHub/Work/verilogLibrary/hdl.org" "Tasks")
+    "* TODO %?\n  %i\n  %a")
+   ("d" "DigitalOcean" entry (file+headline "~/GitHub/Work/digitalOcean.org" "Tasks")
+    "* TODO %?\n  %i\n  %a")
+   ("o" "osx" entry (file+headline "~/GitHub/Work/osx.org" "Tasks")
+    "* TODO %?\n  %i\n  %a")
+   ))
+#+END_SRC
+
+
+* Text Manipulation
+
+| Action                | Key | Comments |
+|-----------------------+-----+----------|
+| Spell check           |     |          |
+| Complete word         |     |          |
+| Convert to uper case  |     |          |
+| Convert to lower case |     |          |
+
+
+** TODO 
+ vocablary alt+$ check spelling alt +$
+ Uppper case alt+shift u
+
+
+*  Emacs Help
+describe-mode 【Ctrl+h m】 
+
+* Save Desktop
 desktop_save
 
-Remote 
-Tramp Mode 
+* Remote 
+Tramp Mode - example
+/scp:root@xxx.89.168.xxx:/etc/
 
+* Custom Elisp
 
-Custom Elisp
-1. Skelton
-  (define-skeleton svPutPartselBit
-  "Insert svPutPartSelBit"
-  ()
-  >  (setq name (skeleton-read "Dest: ")) " =  svPutPartSelBit("name", "(skeleton-read "Source: ")", " (skeleton-read "star bit: ")", "(skeleton-read "Width: ")");" \n)
+**  Skelton
 
+ #+BEGIN_SRC elisp
+  (define-skeleton svPutPartselBit
+  "Insert svPutPartSelBit"
+  ()
+  > (setq name (skeleton-read "Dest: ")) " = svPutPartSelBit("name", "(skeleton-read "Source: ")", " (skeleton-read "star bit: ")", "(skeleton-read "Width: ")");" \n)
 
-
+ #+END_SRC

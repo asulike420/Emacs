@@ -21,9 +21,11 @@
 | Highlight in all buffers |                    |
 
 
-** TODO Toggle kill ring https://www.masteringemacs.org/article/searching-buffers-occur-mode
-** TODO Helm Mode https://writequit.org/denver-emacs/presentations/2016-03-01-helm.html#orgheadline1
-** TODO highlight-frame-toggle 
+** TODO Toggle kill ring
+ https://www.masteringemacs.org/article/searching-buffers-occur-mode
+** TODO Helm Mode
+ https://writequit.org/denver-emacs/presentations/2016-03-01-helm.html#orgheadline1
+** TODO highlight-frame-toggle
  http://emacs.stackexchange.com/questions/3202/highlighting-text-in-open-displayed-buffers-windows-searching-for-text-from
  https://github.com/glen-dai/highlight-global 
 
@@ -49,7 +51,8 @@
 | IDO MODE              |                |
 
  
-** TODO Speed bar I found a workaround. If I reload the buffer with C-x C-v, speedbar shows the updated list of functions when reopened. – Binil Thomas May 3 '12 at 7:50,
+** TODO Speed bar
+I found a workaround. If I reload the buffer with C-x C-v, speedbar shows the updated list of functions when reopened. – Binil Thomas May 3 '12 at 7:50,
 
 
 * Search and replace
@@ -58,7 +61,7 @@
 |---------------------------------+---------------+-------------------------------------------------------|
 | Recursive search up             | Ctrl-s        |                                                       |
 | Recursive search down           | Ctrl-r        |                                                       |
-| Occur Mode                      | Ctrl-c o      | (global-set-key (kbd "C-c o") 'occur)TODO             |
+| Occur Mode                      | Ctrl-c Ctrl-o | (global-set-key (kbd "C-c o") 'occur)TODO             |
 | Repalce in Occur Window         |               |                                                       |
 | Ibuffer                         |               |                                                       |
 | Search in marked buffers        |               |                                                       |
@@ -81,7 +84,8 @@ Use Ctrl-h m , while in Ibuufer window to get the list of all hot keys.
 |                                                 |     |
 
 
-** TODO Occur Mode use occour to search Ctrl c + Ctrl o https://www.masteringemacs.org/article/searching-buffers-occur-mode
+** TODO Occur Mode
+use occour to search Ctrl c + Ctrl o https://www.masteringemacs.org/article/searching-buffers-occur-mode
 
 
 

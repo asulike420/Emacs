@@ -1,24 +1,24 @@
 * Editing
 
-| Editing Action           | Key                |
-|--------------------------+--------------------|
-| Undo                     | Ctrl+_             |
-| Select all               | Ctrl+x h           |
-| Cut Word                 | Alt + w            |
-| Cut sentence             | Ctrl+k             |
-| Rectagular Cut           | M-x kill-rectangle |
-| Rectangular insert       | Ctrl + x, r , t    |
-| Toggle Read Only mode    | Ctrl + q           |
-| Change Mode              |                    |
-| Indent Code              | Ctrl+u , TAB       |
-| Code Navigation          |                    |
-| Goto Line number         | Alt +g+g           |
-| Macros                   |                    |
-| registers                |                    |
-| Code folding             |                    |
-| Helm mode                |                    |
-| Text Auto completion     |                    |
-| Highlight in all buffers |                    |
+| Editing Action            | Key                |
+|---------------------------+--------------------|
+| Undo                      | C-_                |
+| Select all                | C-x h              |
+| Cut Word                  | M - w              |
+| Cut sentence              | C-k                |
+| Rectagular Cut            | M-x kill-rectangle |
+| Rectangular insert        | C - x, r , t       |
+| Toggle Read Only mode     | C - q              |
+| Change Mode               |                    |
+| Indent Code               | C-u , TAB          |
+| *Code Navigation          |                    |
+| Goto Line number          | M -g-g             |
+| Macros                    |                    |
+| *registers                |                    |
+| *Code folding             |                    |
+| Helm mode                 |                    |
+| Text Auto completion      |                    |
+||                    |
 
 
 ** TODO Toggle kill ring
@@ -27,7 +27,10 @@
  https://writequit.org/denver-emacs/presentations/2016-03-01-helm.html#orgheadline1
 ** TODO highlight-frame-toggle
  http://emacs.stackexchange.com/questions/3202/highlighting-text-in-open-displayed-buffers-windows-searching-for-text-from
- https://github.com/glen-dai/highlight-global 
+ https://github.com/glen-dai/highlight
+
+* Diff
+ Ediff
 
 * Font Resizing
 
@@ -45,6 +48,7 @@
 | Show line numbers     | M-x linum-mode |
 | Goto begining of file | Ctrl + a       |
 | Goto end of file      | Ctrl + b       |
+| Imenu                 |                |
 | Speed Bar             | M-x speedbar   |
 | Goto Line             |                |
 | Goto File             |                |
@@ -53,6 +57,9 @@
  
 ** TODO Speed bar
 I found a workaround. If I reload the buffer with C-x C-v, speedbar shows the updated list of functions when reopened. – Binil Thomas May 3 '12 at 7:50,
+
+** TODO Imenu
+https://www.emacswiki.org/emacs/ImenuMode
 
 
 * Search and replace
@@ -68,6 +75,7 @@ I found a workaround. If I reload the buffer with C-x C-v, speedbar shows the up
 | Replace in marked buffers       |               |                                                       |
 | Query Replace in marked buffers |               |                                                       |
 | Grep-find                       | M-x grep-find | This is similar to what cna be done from the ibuffer. |
+| *Highlight in all buffers       |               |                                                       |
 
 
 ** Ibuffer
@@ -89,7 +97,7 @@ use occour to search Ctrl c + Ctrl o https://www.masteringemacs.org/article/sea
 
 
 
-*  Notes and Bookmark
+* Notes and Bookmark
 
 | Action                    | Key             | Comments                           |
 |---------------------------+-----------------+------------------------------------|
@@ -97,7 +105,26 @@ use occour to search Ctrl c + Ctrl o https://www.masteringemacs.org/article/sea
 | Bookmark                  |                 |                                    |
 |                           |                 |                                    |
 
+** org-capture customization
 
+*** Initiallize template
+(setq org-capture-templates
+      '(
+	("h" "HDL" entry (file+headline "~/GitHub/Work/verilogLibrary/hdl.org" "Tasks")
+    "* TODO %?\n  %i\n  %a")
+	("d" "DigitalOcean" entry (file+headline "~/GitHub/Work/digitalOcean.org" "Tasks")
+	 "* TODO %?\n  %i\n  %a")
+	("o" "osx" entry (file+headline "~/GitHub/Work/osx.org" "Tasks")
+	 "* TODO %?\n  %i\n  %a")
+	)
+      )
+
+
+*** Add already existing template
+(add-to-list 'org-capture-templates
+  '("t" "rw_test" entry (file+headline "~/GitHub/Work/verilogLibrary/UVM_examples/EdaplaygroundBackup/VirtualSequenceExample/todo.org" "Tasks")
+     "* TODO %?\n  %i\n  %a")
+    )
 
 * ORG MODE
 
@@ -155,7 +182,7 @@ describe-mode 【Ctrl+h m】
 * Save Desktop
 desktop_save
 
-* Remote 
+* Remote
 Tramp Mode - example
 /scp:root@xxx.89.168.xxx:/etc/
 

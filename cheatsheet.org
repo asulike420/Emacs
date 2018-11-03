@@ -108,6 +108,7 @@ use occour to search Ctrl c + Ctrl o https://www.masteringemacs.org/article/sea
 ** org-capture customization
 
 *** Initiallize template
+#+BEGIN_SRC elisp
 (setq org-capture-templates
       '(
 	("h" "HDL" entry (file+headline "~/GitHub/Work/verilogLibrary/hdl.org" "Tasks")
@@ -118,13 +119,16 @@ use occour to search Ctrl c + Ctrl o https://www.masteringemacs.org/article/sea
 	 "* TODO %?\n  %i\n  %a")
 	)
       )
-
+#+END_SRC
 
 *** Add already existing template
+#+BEGIN_SRC elisp
 (add-to-list 'org-capture-templates
   '("t" "rw_test" entry (file+headline "~/GitHub/Work/verilogLibrary/UVM_examples/EdaplaygroundBackup/VirtualSequenceExample/todo.org" "Tasks")
      "* TODO %?\n  %i\n  %a")
     )
+
+#+END_SRC
 
 * ORG MODE
 

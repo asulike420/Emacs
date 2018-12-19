@@ -1,24 +1,24 @@
 * Editing
 
-| Editing Action            | Key                |
-|---------------------------+--------------------|
-| Undo                      | C-_                |
-| Select all                | C-x h              |
-| Cut Word                  | M - w              |
-| Cut sentence              | C-k                |
-| Rectagular Cut            | M-x kill-rectangle |
-| Rectangular insert        | C - x, r , t       |
-| Toggle Read Only mode     | C - q              |
-| Change Mode               |                    |
-| Indent Code               | C-u , TAB          |
-| *Code Navigation          |                    |
-| Goto Line number          | M -g-g             |
-| Macros                    |                    |
-| *registers                |                    |
-| *Code folding             |                    |
-| Helm mode                 |                    |
-| Text Auto completion      |                    |
-||                    |
+| Editing Action        | Key                    |
+|-----------------------+------------------------|
+| Undo                  | C-_                    |
+| Select all            | C-x h                  |
+| Cut Word              | M - w                  |
+| Cut sentence          | C-k                    |
+| Rectagular Cut        | M-x kill-rectangle     |
+| Rectangular insert    | C - x, r , t           |
+| Toggle Read Only mode | C - q                  |
+| Change Mode           |                        |
+| Indent Code           | C-u , TAB              |
+| *Code Navigation      |                        |
+| Goto Line number      | M -g-g                 |
+| Macros                |                        |
+| *registers            | C-x r s r,   C-x r i r |
+| *Code folding         |                        |
+| Helm mode             |                        |
+| Text Auto completion  |                        |
+|                       |                        |
 
 
 ** TODO Toggle kill ring
@@ -40,9 +40,10 @@
 | Zoom Out | Ctrl+x, - |
 |          |           |
 
-
 * Window Management/Navigation/Code Browsing
 
+|                       |                |
+|-----------------------+----------------|
 | Veritcal split        | Ctrl+3         |
 | Horizontal Split      | Ctrl+2         |
 | Show line numbers     | M-x linum-mode |
@@ -53,14 +54,14 @@
 | Goto Line             |                |
 | Goto File             |                |
 | IDO MODE              |                |
+| Code Folding          |                |
 
  
 ** TODO Speed bar
-I found a workaround. If I reload the buffer with C-x C-v, speedbar shows the updated list of functions when reopened. – Binil Thomas May 3 '12 at 7:50,
+   I found a workaround. If I reload the buffer with C-x C-v, speedbar shows the updated list of functions when reopened. – Binil Thomas May 3 '12 at 7:50,
 
 ** TODO Imenu
 https://www.emacswiki.org/emacs/ImenuMode
-
 
 * Search and replace
 
@@ -94,8 +95,6 @@ Use Ctrl-h m , while in Ibuufer window to get the list of all hot keys.
 
 ** TODO Occur Mode
 use occour to search Ctrl c + Ctrl o https://www.masteringemacs.org/article/searching-buffers-occur-mode
-
-
 
 * Notes and Bookmark
 
@@ -141,7 +140,7 @@ use occour to search Ctrl c + Ctrl o https://www.masteringemacs.org/article/sea
 | Collapse all       |     |          |
 
 
-** TODO table 
+** TODO table.el
  https://www.emacswiki.org/emacs/TableMode
  – First, we select the text and capture the table with the M-x table-capture command.
  – We must then specify a column delimiter regexp. SPC SPC is ok for this table.
@@ -149,7 +148,11 @@ use occour to search Ctrl c + Ctrl o https://www.masteringemacs.org/article/sea
  – We just type RET when asked for justification, this will select the default.
   
  – For Minimum Cell Width, we can take a value of 10. Here is the final result:
-  
+ 
+** TODO org-table
+Need to summarize below information.
+*** Basic of org table usage: https://orgmode.org/manual/Built_002din-table-editor.html#Built_002din-table-editor
+
 
 ** Example code for setting up org capture
 
@@ -163,7 +166,6 @@ use occour to search Ctrl c + Ctrl o https://www.masteringemacs.org/article/sea
     "* TODO %?\n  %i\n  %a")
    ))
 #+END_SRC
-
 
 * Text Manipulation
 
@@ -179,8 +181,7 @@ use occour to search Ctrl c + Ctrl o https://www.masteringemacs.org/article/sea
  vocablary alt+$ check spelling alt +$
  Uppper case alt+shift u
 
-
-*  Emacs Help
+* Emacs Help
 describe-mode 【Ctrl+h m】 
 
 * Save Desktop

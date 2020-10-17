@@ -202,3 +202,57 @@ Tramp Mode - example
   > (setq name (skeleton-read "Dest: ")) " = svPutPartSelBit("name", "(skeleton-read "Source: ")", " (skeleton-read "star bit: ")", "(skeleton-read "Width: ")");" \n)
 
  #+END_SRC
+* Emacs Language
+** Conditional
+*** When
+#+begin_src emacs-lisp
+(when condition a b c)
+#+end_src
+*** if
+#+begin_src emacs-lisp
+(if nil
+    (print 'true)
+  'very-false)
+#+end_src
+*** cond
+#+begin_src emacs-lisp
+(cond ((numberp x) x)
+      ((stringp x) x)
+      ((bufferp x)
+       (setq temporary-hack x) ; multiple body-forms
+       (buffer-name x))        ; in one clause
+      ((symbolp x) (symbol-value x)))
+#+end_src
+*** unless
+#+begin_src emacs-lisp
+(unless condition a b c)
+#+end_src
+** Let
+(let ((variable value)
+      (variable value)
+      …)
+  body…)
+** Defun
+(defun function-name (arguments…)
+  "optional-documentation…"
+  (interactive argument-passing-info)     ; optional
+  body…)
+
+  #+begin_src emacs-lisp
+(defun multiply-by-seven (number)
+  "Multiply NUMBER by seven."
+  (* 7 number))
+  #+end_src
+
+
+** TODO List
+https://www.gnu.org/software/emacs/manual/html_node/elisp/Lists.html
+#+begin_src emacs-lisp
+(list 1 2 3 4 5)
+(list 1 2 '(3 4 5) 'foo)
+(list)
+#+end_src
+
+** interactive
+https://www.gnu.org/software/emacs/manual/html_node/elisp/Interactive-Codes.html
+https://www.gnu.org/software/emacs/manual/html_node/elisp/Interactive-Examples.html
